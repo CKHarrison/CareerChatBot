@@ -290,62 +290,13 @@
   <category>
       <pattern>IT</pattern>
       <template>
-          What are you more interested in?
-          <button>
-              <text>Networks</text>
-              <postback>NETWORKING</postback>
-          </button>
+          We recommend cyber security as a career in general IT, as it is in increasing demand.
+          <br/>
+          Click on it to find out more information.
           <button>
               <text>Cyber Security</text>
               <postback>CYBER SECURITY</postback>
           </button>
-      </template>
-  </category>
-  
-  <category>
-      <pattern>NETWORKING</pattern>
-      <template>
-        There is always a massive demand for network IT engineers. As a network engineer you will be responsible for connecting people businesses together.
-        You will be an essential piece to any business as they will rely on you to keep their infrastructure up and running.
-          <br />
-          Here is some information
-          <br />
-          <card>
-              <image>https://fiberguide.net/wp-content/uploads/2019/01/optical-network-engineer.jpg</image>
-              <title>Network Egineer</title>
-              <subtitle>Network Engineer</subtitle>
-              <button>
-                  <text>Click here for links to information</text>
-                  <postback>NETWORK INFO</postback>
-              </button>
-          </card>
-      </template>
-  </category>
-  
-  <category>
-      <pattern>NETWORK INFO</pattern>
-      <template>
-          <ul>
-              <li>
-                <link>
-                    <text>What does a network engineer do?</text>
-                    <url>https://www.wgu.edu/blog/what-network-engineer2011.html</url>
-                </link>
-              </li>
-              <li>
-                <link>
-                    <text>How much does a network engineer make?</text>
-                    <url>https://www.indeed.com/career/network-engineer/salaries</url>
-                </link>
-              </li>
-              <li>
-                <link>
-                    <text>What certifications do you need to become a network engineer?</text>
-                    <url>https://www.indeed.com/career-advice/careers/what-does-a-network-engineer-do</url>
-                </link>
-              </li>
-          </ul>
-           <srai>CHOOSE ANOTHER PATH</srai>
       </template>
   </category>
   
