@@ -117,7 +117,9 @@
                 </link>
               </li>
           </ul>
+          <srai>CHOOSE ANOTHER PATH</srai>
       </template>
+       
   </category>
   
   <category>
@@ -165,6 +167,7 @@
                 </link>
               </li>
           </ul>
+           <srai>CHOOSE ANOTHER PATH</srai>
       </template>
   </category>
   
@@ -229,6 +232,7 @@
                 </link>
               </li>
           </ul>
+           <srai>CHOOSE ANOTHER PATH</srai>
       </template>
   </category>
   
@@ -278,6 +282,7 @@
                 </link>
               </li>
           </ul>
+           <srai>CHOOSE ANOTHER PATH</srai>
       </template>
   </category>
   
@@ -340,6 +345,7 @@
                 </link>
               </li>
           </ul>
+           <srai>CHOOSE ANOTHER PATH</srai>
       </template>
   </category>
   
