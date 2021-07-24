@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>HI ^</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HEY ^</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>Hello ^</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+      <pattern>HELLO</pattern>
+      <template>
+          Hello, I am WGU Careeer Bot. <br />
+          Would you like to take our career placement quiz?
+          <br />
+          <think><set name="topic">response</set></think>
+      </template>
+  </category>
+  
+  <topic name="response">
+   <category>
+      <pattern>*</pattern>
+      <template>
+         
+          <think><set name="input"><star /></set></think>
+          <condition name="input">
+              <li value="yes">
+                  Please Pick what field you are most interested in.
+                  <button>
+                      <text>Software Development</text>
+                      <postback>SOFTWARE ^</postback>
+                  </button>   
+                  <button>
+                      <text>Data and Machine Learning</text>
+                      <postback>DATA</postback>
+                  </button>
+                  <button>
+                      <text>General IT</text>
+                      <postback>IT</postback>
+                  </button>
+              </li>
+              <li value="no">Logging you out. Please type hello to reinitialize chat.</li>
+              <li>Please enter YES or NO</li>
+          </condition>
+      </template>
+    </category>
+  </topic>
+  
+  <!-- Software Thread-->
+  
+  <category>
+      <pattern>SOFTWARE ^</pattern>
+      <template>
+          What are you more interested in?
+          <button>
+              <text>Design and user experience</text>
+              <postback>FRONT END</postback>
+          </button>
+          <button>
+              <text>Creating APIs, managing databases, creating applications</text>
+              <postback>BACK END</postback>
+          </button>
+          
+      </template>
+  </category>
+  
+  <category>
+      <pattern>FRONT END</pattern>
+      <template>
+
+          You may want to look into front end development. You'll be able to flex 
+          your creative muscles while building responsive and interesting products for users.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://cdn.educba.com/academy/wp-content/uploads/2019/09/What-is-Front-End-Developer.png</image>
+              <title>Front End Development</title>
+              <subtitle>Front End Developer</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>FRONTEND INFO</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>FRONTEND INFO</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>What is a front end developer?</text>
+                    <url>https://www.freecodecamp.org/news/what-is-front-end-development/</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a front end developer make?</text>
+                    <url>https://www.indeed.com/career/front-end-developer/salaries</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>What technologies does a front end developer work with?</text>
+                    <url>https://codecapsule.com/2021/01/26/complete-overview-frontend-development-2021/</url>
+                </link>
+              </li>
+          </ul>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>BACK END</pattern>
+      <template>
+
+          You may want to look into back end development. Back-end developers are responsible for creating the 
+          underlying architecture powering web and mobile applications. You'll work with databases,
+          APIs, and will have to flex your knowledge of algorithms and data structures.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://www.thebalancecareers.com/thmb/934mZp4W5j4MSCHusNcXGY0MXI8=/1500x1000/filters:fill(auto,1)/backenddeveloper-2502825a14ff440eb775dc4244e7ed4d.png</image>
+              <title>Back End Development</title>
+              <subtitle>Back End Developer</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>BACKEND INFO</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>BACKEND INFO</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>What does a back end developer do?</text>
+                    <url>https://www.careerexplorer.com/careers/back-end-developer/#:~:text=A%20back-end%20developer%20is%20someone%20who%20builds%20and,maintaining%2C%20testing%2C%20and%20debugging%20the%20entire%20back%20end.</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a back end developer make?</text>
+                    <url>https://www.indeed.com/career/back-end-developer</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>What technologies does a front end developer work with?</text>
+                    <url>https://www.guru99.com/what-is-backend-developer.html/</url>
+                </link>
+              </li>
+          </ul>
+      </template>
+  </category>
+  
+  <!--Data Thread-->
+  <category>
+      <pattern>DATA</pattern>
+      <template>
+          What are you most interested in?
+          <button>
+              <text>Data Analytics</text>
+              <postback>DATA ANALYTICS</postback>
+          </button>
+          <button>
+              <text>Machine Learning Artificial Intelligence</text>
+              <postback>MACHINE LEARNING</postback>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DATA ANALYTICS</pattern>
+      <template>
+
+          Data Analytics is a fast growing field. As a data scientist 
+          you will be responsible for analyzing business trends, organizing data into usable information
+          and making predictions based on current trends.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://www.analyticsinsight.net/wp-content/uploads/2020/02/What-Skills-Do-I-Need-to-Become-a-Data-Scientist.jpg</image>
+              <title>Data Analytics</title>
+              <subtitle>Data Analytics</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>DATA INFO</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DATA INFO</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>What is a data analyst?</text>
+                    <url>https://www.mastersindatascience.org/learning/what-is-data-analytics/</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a data analyst make?</text>
+                    <url>https://www.indeed.com/career/data-analyst/salaries</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>What are the day to day activities of a data analyst?</text>
+                    <url>https://www.rasmussen.edu/degrees/technology/blog/what-does-a-data-analyst-do/</url>
+                </link>
+              </li>
+          </ul>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>MACHINE LEARNING</pattern>
+      <template>
+
+          Machine Learning and Artifical Intelligence is one of the most sought after skills in 2021.
+          Becoming a mahcine learning engineer means that you will have the opportunity to work in almost any field you want.
+          You can work on creating artifical intelligence powerful enough to pass the turing test, use machine learning to predict trends in the stock market,
+          or even create algorithms that power the recommendation engines of YouTube and Google.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://www.vertica.com/wp-content/uploads/2019/04/Machine_learning_199085055.jpeg</image>
+              <title>Machine Learning</title>
+              <subtitle>Machine Learning</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>MACHINE LEARNING</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>MACHINE LEARNING</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>What does a mchine learning engineer do?</text>
+                    <url>https://www.discoverdatascience.org/career-information/machine-learning-engineer/</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a machine learning engineer make?</text>
+                    <url>https://www.indeed.com/career/machine-learning-engineer/salaries</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How to become a machine engineer</text>
+                    <url>https://www.analyticsvidhya.com/blog/2020/11/how-can-you-build-a-career-in-data-science-machine-learning/</url>
+                </link>
+              </li>
+          </ul>
+      </template>
+  </category>
+  
+  <!--IT Thread-->
+  <category>
+      <pattern>IT</pattern>
+      <template>
+          What are you more interested in?
+          <button>
+              <text>Networks</text>
+              <postback>NETWORKING</postback>
+          </button>
+          <button>
+              <text>Cyber Security</text>
+              <postback>CYBER SECURITY</postback>
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NETWORKING</pattern>
+      <template>
+        There is always a massive demand for network IT engineers. As a network engineer you will be responsible for connecting people businesses together.
+        You will be an essential piece to any business as they will rely on you to keep their infrastructure up and running.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://fiberguide.net/wp-content/uploads/2019/01/optical-network-engineer.jpg</image>
+              <title>Network Egineer</title>
+              <subtitle>Network Engineer</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>NETWORK INFO</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NETWORK INFO</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>What does a network engineer do?</text>
+                    <url>https://www.wgu.edu/blog/what-network-engineer2011.html</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a network engineer make?</text>
+                    <url>https://www.indeed.com/career/network-engineer/salaries</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>What certifications do you need to become a network engineer?</text>
+                    <url>https://www.indeed.com/career-advice/careers/what-does-a-network-engineer-do</url>
+                </link>
+              </li>
+          </ul>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CYBER SECURITY</pattern>
+      <template>
+          With ransomware attacks, hacks, and security breaches becoming more and more common, there will always be a strong need for cyber security engineers.
+          <br/>
+          As a security engineer you will be tasked with protecting critical systems from infection and malware, and will constantly need to
+          learn and expand as attacks become more and more sophisticated. A cyber security engineer is an extremely creative and 
+          in demand career.
+          <br />
+          Here is some information
+          <br />
+          <card>
+              <image>https://www.cybersecglobal.com/wp-content/uploads/2016/12/cse-largesize-singlepage.jpg</image>
+              <title>Cyber Security Engineer</title>
+              <subtitle>Cyber Security Engineer</subtitle>
+              <button>
+                  <text>Click here for links to information</text>
+                  <postback>CYBER SECURITY INFO</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CYBER SECURITY INFO</pattern>
+      <template>
+          <ul>
+              <li>
+                <link>
+                    <text>Why you should become a cyber security engineer</text>
+                    <url>https://onlinedegrees.sandiego.edu/should-you-become-a-cyber-security-engineer/</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>How much does a network engineer make?</text>
+                    <url>https://www.payscale.com/research/US/Job=Cyber_Security_Engineer/Salary</url>
+                </link>
+              </li>
+              <li>
+                <link>
+                    <text>The roles and responsibilities of a cyber security engineer</text>
+                    <url>https://www.invensislearning.com/blog/cyber-security-engineer-responsibilities/</url>
+                </link>
+              </li>
+          </ul>
+          <srai>CHOOSE ANOTHER PATH</srai>
+      </template>
+  </category>
+  
+  <!--CHOOSE ANOTHER PATH-->
+  <category>
+      <pattern>CHOOSE ANOTHER PATH</pattern>
+      <template>
+          would you like to choose another path?
+          <button>
+              <text>Yes</text>
+              <postback>YES</postback>
+          </button>
+          <button>
+              <text>NO</text>
+              <postback>NO</postback>
+          </button>
+      </template>
+  </category>
+  <category>
+      <pattern>YES PATH</pattern>
+      <template><srai><think><set name="topic">response</set></think></srai></template>
+  </category>
+  <category>
+      <pattern>NO</pattern>
+      <template>
+          Logging you out...
+          <br/>
+          If you wish to restart the conversation, please type RESET.
+          <br/>
+          Goodbye.
+      </template>
+  </category>
+  
+  <!--RESET-->
+  <category>
+      <pattern>RESET</pattern>
+      <template><srai>HELLO</srai></template>
+  </category>
+
+</aiml>
