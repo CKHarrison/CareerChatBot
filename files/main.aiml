@@ -51,7 +51,12 @@
                   </button>
               </li>
               <li value="no">Logging you out. Please type hello to reinitialize chat.</li>
-              <li>Please enter YES or NO</li>
+              <li value="reset"><srai>RESET</srai></li>
+              <li>
+                My responses are very limited. Please choose the correct option, or type RESET to reset the conversation.
+                <br/>
+                Once reset, the conversation can be reinitialized by typing "HELLO".
+              </li>
           </condition>
       </template>
     </category>
@@ -267,7 +272,7 @@
           <ul>
               <li>
                 <link>
-                    <text>What does a mchine learning engineer do?</text>
+                    <text>What does a machine learning engineer do?</text>
                     <url>https://www.discoverdatascience.org/career-information/machine-learning-engineer/</url>
                 </link>
               </li>
@@ -356,9 +361,9 @@
   <category>
       <pattern>CHOOSE ANOTHER PATH</pattern>
       <template>
-          would you like to choose another path?
+          Would you like to choose another path?
           <button>
-              <text>Yes</text>
+              <text>YES</text>
               <postback>YES</postback>
           </button>
           <button>
