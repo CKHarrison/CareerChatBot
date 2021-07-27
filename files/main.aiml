@@ -27,6 +27,7 @@
       </template>
   </category>
   
+  
   <topic name="response">
    <category>
       <pattern>*</pattern>
@@ -387,6 +388,14 @@
   <category>
       <pattern>RESET</pattern>
       <template><srai>HELLO</srai></template>
+  </category>
+  
+    <category>
+    <pattern>*</pattern>
+    <template>My responses are very limited. Please choose the correct option, or type RESET to reset the conversation.
+    <br/>
+    Once reset, the conversation can be reinitialized by typing "HELLO".
+    </template>
   </category>
 
 </aiml>
