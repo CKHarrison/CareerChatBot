@@ -2,7 +2,10 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I do not know the answer to that question.</template>
+    <template>My responses are very limited. Please choose the correct option, or type RESET to reset the conversation.
+    <br/>
+    Once reset, the conversation can be reinitialized by typing "HELLO".
+    </template>
   </category>
   
   

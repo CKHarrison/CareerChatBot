@@ -22,6 +22,7 @@
           Hello, I am WGU Careeer Bot. <br />
           Would you like to take our career placement quiz?
           <br />
+          Please respond YES or NO
           <think><set name="topic">response</set></think>
       </template>
   </category>
@@ -34,7 +35,7 @@
           <think><set name="input"><star /></set></think>
           <condition name="input">
               <li value="yes">
-                  Please Pick what field you are most interested in.
+                  Please click which field you are most interested in.
                   <button>
                       <text>Software Development</text>
                       <postback>SOFTWARE ^</postback>
@@ -375,6 +376,8 @@
           Logging you out...
           <br/>
           If you wish to restart the conversation, please type RESET.
+          <br/>
+          Once reset, the conversation can be reinitialized by typing "HELLO".
           <br/>
           Goodbye.
       </template>
